@@ -33,12 +33,12 @@ function updateTable (table) {
           d[4] = data.height
           d[5] = data.difficulty
           d[6] = (data.globalHashRate / 1000000).toFixed(2) + ' MH/s'
-          d[7] = data.last_known_block_index
+          d[7] = (data.synced) ? 'Yes' : 'No'
           d[8] = data.tx_pool_size
           d[9] = data.tx_count
           d[10] = data.incoming_connections_count
           d[11] = data.outgoing_connections_count
-          d[12] = data.status
+          d[12] = data.version
         } else {
           d[4] = 0
           d[5] = 0
@@ -74,12 +74,12 @@ function loadTable (table) {
             data.height,
             data.difficulty,
             (data.globalHashRate / 1000000).toFixed(2) + ' MH/s',
-            data.last_known_block_index,
+            (data.synced) ? 'Yes' : 'No',
             data.tx_pool_size,
             data.tx_count,
             data.incoming_connections_count,
             data.outgoing_connections_count,
-            data.status
+            data.version
           ]).draw(false)
         } else {
           table.row.add([
@@ -90,12 +90,12 @@ function loadTable (table) {
             0,
             0,
             '0 H/s',
+            'No',
             0,
             0,
             0,
             0,
-            0,
-            'Offline'
+            'Unknown'
           ]).draw(false)
         }
       }
