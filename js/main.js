@@ -31,9 +31,9 @@ function updateTable (table) {
       success: function (data) {
         if (!data.error) {
           d[4] = data.height
-          d[5] = data.difficulty
-          d[6] = (data.globalHashRate / 1000000).toFixed(2) + ' MH/s'
-          d[7] = (data.synced) ? 'Yes' : 'No'
+          d[5] = (data.synced) ? 'Yes' : 'No'
+          d[6] = data.difficulty
+          d[7] = (data.globalHashRate / 1000000).toFixed(2) + ' MH/s'
           d[8] = data.tx_pool_size
           d[9] = data.tx_count
           d[10] = data.incoming_connections_count
@@ -41,14 +41,14 @@ function updateTable (table) {
           d[12] = data.version
         } else {
           d[4] = 0
-          d[5] = 0
+          d[5] = 'No'
           d[6] = '0 H/s'
           d[7] = 0
           d[8] = 0
           d[9] = 0
           d[10] = 0
           d[11] = 0
-          d[12] = 'Offline'
+          d[12] = 'Unknown'
         }
         that.invalidate()
       }
@@ -72,9 +72,9 @@ function loadTable (table) {
             node.name,
             node.region,
             data.height,
+            (data.synced) ? 'Yes' : 'No',
             data.difficulty,
             (data.globalHashRate / 1000000).toFixed(2) + ' MH/s',
-            (data.synced) ? 'Yes' : 'No',
             data.tx_pool_size,
             data.tx_count,
             data.incoming_connections_count,
