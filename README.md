@@ -35,3 +35,11 @@ You can find me on the TurtleCoin discord at http://chat.turtlecoin.lol/ as @ibu
 I'll kindly accept your donation in [TRTL] if you love this project.
 
 TRTLv1pacKFJk9QgSmzk2LJWn14JGmTKzReFLz1RgY3K9Ryn7783RDT2TretzfYdck5GMCGzXTuwKfePWQYViNs4avKpnUbrwfQ
+
+## License
+
+```
+Copyright (C) 2018 Brandon Lehmann, The TurtleCoin Developers
+
+Please see the included LICENSE file for more information.
+```
