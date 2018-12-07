@@ -1,8 +1,5 @@
 const apiInterface = 'https://api.turtlenode.io/'
 const nodes = [
   { name: 'US-East-1', hostname: 'node-1.nyc.turtlenode.io', port: 11898, region: 'US East' },
-  { name: 'US-West-1', hostname: 'node-1.sfo.turtlenode.io', port: 11898, region: 'US West' },
-  { name: 'EU-AMS-1', hostname: 'node-1.ams.turtlenode.io', port: 11898, region: 'Europe' },
-  { name: 'AS-SIN-1', hostname: 'node-1.sin.turtlenode.io', port: 11898, region: 'Asia' },
   { name: 'SEED', hostname: 'seed.turtlenode.io', port: 11898, region: 'US East' }
 ]
